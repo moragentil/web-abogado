@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #1a3a52;
+  --color-primary-light: #2c5f7e;
+  --color-primary-dark: #0f2639;
+}
+
 :root {
   font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   line-height: 1.5;

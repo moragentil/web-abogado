@@ -16,122 +16,142 @@ function Contact() {
             Contacto
           </h2>
           <p className="text-lg text-gray-600">
-            Estoy aquí para ayudarte. Completa el formulario o contáctame directamente por WhatsApp.
+            Estoy aquí para ayudarte. Completa el formulario o contáctame directamente.
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-xl p-6 md:p-8 mb-8">
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          {/* Datos de contacto */}
+          <div className="space-y-6">
             <div>
-              <label htmlFor="nombre" className="block font-semibold text-gray-800 mb-2">
-                Nombre Completo
-              </label>
-              <input 
-                id="nombre" 
-                type="text" 
-                placeholder="Tu nombre" 
-                required
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-light focus:ring-4 focus:ring-primary/10 outline-none transition-all"
-              />
+              <h3 className="text-xl font-bold text-primary mb-6">Información de Contacto</h3>
+              <div className="grid grid-cols-1 gap-4">
+                {contacts.map(({ icon: Icon, label, value, link }) => (
+                  <div 
+                    key={label} 
+                    className="bg-white border border-gray-200 rounded-xl p-5 shadow-md hover:shadow-lg transition-all flex items-center gap-4"
+                  >
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <Icon className="w-6 h-6 text-primary-light" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-primary text-sm mb-1">{label}</h4>
+                      {link ? (
+                        <a 
+                          href={link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-gray-700 hover:text-primary-light hover:underline font-medium text-sm"
+                        >
+                          {value}
+                        </a>
+                      ) : (
+                        <p className="text-gray-700 text-sm">{value}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
             
-            <div>
-              <label htmlFor="email" className="block font-semibold text-gray-800 mb-2">
-                Email
-              </label>
-              <input 
-                id="email" 
-                type="email" 
-                placeholder="tu@email.com" 
-                required
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-light focus:ring-4 focus:ring-primary/10 outline-none transition-all"
-              />
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-md">
+              <h4 className="font-bold text-primary mb-3">Horario de Atención</h4>
+              <div className="space-y-2 text-sm text-gray-700">
+                <p><span className="font-semibold">Lunes a Viernes:</span> 9:00 - 18:00</p>
+                <p><span className="font-semibold">Sábados:</span> 9:00 - 13:00</p>
+              </div>
             </div>
-            
-            <div>
-              <label htmlFor="telefono" className="block font-semibold text-gray-800 mb-2">
-                Teléfono
-              </label>
-              <input 
-                id="telefono" 
-                type="tel" 
-                placeholder="+54 11 1234-5678" 
-                required
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-light focus:ring-4 focus:ring-primary/10 outline-none transition-all"
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="tramite" className="block font-semibold text-gray-800 mb-2">
-                Tipo de Trámite
-              </label>
-              <select 
-                id="tramite" 
-                defaultValue=""
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-light focus:ring-4 focus:ring-primary/10 outline-none transition-all"
-              >
-                <option value="" disabled>Selecciona un trámite</option>
-                <option>Declaratoria de herederos</option>
-                <option>Informe sobre inmuebles / estudio de título</option>
-                <option>Informe sobre garantía de un inmueble</option>
-                <option>Créditos hipotecarios UVA / Procrear</option>
-                <option>Partidas (nacimiento, matrimonio, defunción)</option>
-                <option>Diligenciamiento de oficios y cédulas</option>
-                <option>Informes de juicios universales</option>
-                <option>Informes comerciales</option>
-                <option>Informes catastrales</option>
-                <option>Sucesiones</option>
-                <option>Certificación de años de servicio</option>
-                <option>Otro</option>
-              </select>
-            </div>
-            
-            <div className="md:col-span-2">
-              <label htmlFor="mensaje" className="block font-semibold text-gray-800 mb-2">
-                Consulta / Mensaje
-              </label>
-              <textarea 
-                id="mensaje" 
-                rows="5" 
-                placeholder="Cuéntame sobre tu trámite o consulta..." 
-                required
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-light focus:ring-4 focus:ring-primary/10 outline-none transition-all resize-vertical"
-              ></textarea>
-            </div>
-            
-            <div className="md:col-span-2">
+          </div>
+
+                    {/* Formulario */}
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-xl p-6">
+            <h3 className="text-xl font-bold text-primary mb-6">Envía tu consulta</h3>
+            <form className="space-y-4">
+              <div>
+                <label htmlFor="nombre" className="block font-semibold text-gray-800 mb-2 text-sm">
+                  Nombre Completo
+                </label>
+                <input 
+                  id="nombre" 
+                  type="text" 
+                  placeholder="Tu nombre" 
+                  required
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-primary-light focus:ring-2 focus:ring-primary/10 outline-none transition-all text-sm"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block font-semibold text-gray-800 mb-2 text-sm">
+                  Email
+                </label>
+                <input 
+                  id="email" 
+                  type="email" 
+                  placeholder="tu@email.com" 
+                  required
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-primary-light focus:ring-2 focus:ring-primary/10 outline-none transition-all text-sm"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="telefono" className="block font-semibold text-gray-800 mb-2 text-sm">
+                  Teléfono
+                </label>
+                <input 
+                  id="telefono" 
+                  type="tel" 
+                  placeholder="+54 11 1234-5678" 
+                  required
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-primary-light focus:ring-2 focus:ring-primary/10 outline-none transition-all text-sm"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="tramite" className="block font-semibold text-gray-800 mb-2 text-sm">
+                  Tipo de Trámite
+                </label>
+                <select 
+                  id="tramite" 
+                  defaultValue=""
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-primary-light focus:ring-2 focus:ring-primary/10 outline-none transition-all text-sm"
+                >
+                  <option value="" disabled>Selecciona un trámite</option>
+                  <option>Declaratoria de herederos</option>
+                  <option>Informe sobre inmuebles / estudio de título</option>
+                  <option>Informe sobre garantía de un inmueble</option>
+                  <option>Créditos hipotecarios UVA / Procrear</option>
+                  <option>Partidas (nacimiento, matrimonio, defunción)</option>
+                  <option>Diligenciamiento de oficios y cédulas</option>
+                  <option>Informes de juicios universales</option>
+                  <option>Informes comerciales</option>
+                  <option>Informes catastrales</option>
+                  <option>Sucesiones</option>
+                  <option>Certificación de años de servicio</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              
+              <div>
+                <label htmlFor="mensaje" className="block font-semibold text-gray-800 mb-2 text-sm">
+                  Consulta / Mensaje
+                </label>
+                <textarea 
+                  id="mensaje" 
+                  rows="4" 
+                  placeholder="Cuéntame sobre tu trámite o consulta..." 
+                  required
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-primary-light focus:ring-2 focus:ring-primary/10 outline-none transition-all resize-vertical text-sm"
+                ></textarea>
+              </div>
+              
               <button 
                 type="submit" 
-                className="w-full bg-primary text-white px-6 py-4 rounded-xl font-bold hover:bg-primary-light transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
+                className="w-full bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-light transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
               >
                 Enviar Consulta
               </button>
-            </div>
-          </form>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {contacts.map(({ icon: Icon, label, value, link }) => (
-            <div 
-              key={label} 
-              className="bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
-            >
-              <Icon className="w-8 h-8 text-primary-light mx-auto mb-4" />
-              <h4 className="font-bold text-primary mb-2">{label}</h4>
-              {link ? (
-                <a 
-                  href={link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-primary-light hover:underline font-semibold"
-                >
-                  {value}
-                </a>
-              ) : (
-                <p className="text-gray-600">{value}</p>
-              )}
-            </div>
-          ))}
+            </form>
+          </div>
         </div>
 
         <div className="mt-12">

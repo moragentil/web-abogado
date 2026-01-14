@@ -25,13 +25,23 @@ const testimonials = [
 
 function Testimonials() {
   return (
-    <section id="testimonios" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      id="testimonios" 
+      className="py-20 relative overflow-hidden bg-cover bg-center bg-fixed"
+      style={{
+        backgroundImage: "url('/src/assets/fondo-opiniones2.webp')",
+      }}
+    >
+      {/* Capa de color encima */}
+      <div className="absolute inset-0 bg-primary/85"></div>
+      
+      {/* Contenido que se mueve al scrollear */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-primary mb-3">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-3">
             Opiniones de Clientes
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-white/90">
             Lo que dicen quienes confiaron en nuestros servicios
           </p>
         </div>
@@ -40,14 +50,14 @@ function Testimonials() {
           {testimonials.map(({ name, text }) => (
             <div 
               key={name} 
-              className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col"
+              className="bg-white/95 backdrop-blur-sm border border-white/20 rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex flex-col"
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <p className="text-gray-600 italic leading-relaxed mb-4 flex-grow">
+              <p className="text-gray-700 italic leading-relaxed mb-4 flex-grow">
                 "{text}"
               </p>
               <p className="font-bold text-primary">
