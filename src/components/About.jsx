@@ -20,32 +20,32 @@ const highlights = [
 
 function About() {
   return (
-    <section id="sobre-jorge" className="py-20 bg-gray-50">
+    <section id="sobre-jorge" className="py-16 bg-gray-50 scroll-m-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-primary mb-6">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1a3a52] mb-5">
               Sobre Jorge
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-4">
+            <p className="text-base text-gray-600 leading-relaxed mb-3">
               Soy Jorge, abogado especializado en la gestión de trámites legales. Mi objetivo es brindarte 
               un servicio de calidad, caracterizado por la seriedad, confiabilidad y rapidez en cada gestión.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+            <p className="text-base text-gray-600 leading-relaxed mb-6">
               Con ubicación estratégica en La Plata, facilito el acceso a todos los organismos necesarios 
               para resolver tus trámites de manera eficiente. Mi compromiso es acompañarte en cada paso 
               del proceso con profesionalismo y dedicación.
             </p>
             
-            <div className="space-y-5">
+            <div className="space-y-4">
               {highlights.map(({ icon: Icon, title, description }) => (
-                <div key={title} className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-primary" />
+                <div key={title} className="flex gap-3">
+                  <div className="flex-shrink-0 w-10 h-10 bg-[#1a3a52]/10 rounded-full flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-[#1a3a52]" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-primary mb-1">{title}</h4>
-                    <p className="text-gray-600">{description}</p>
+                    <h4 className="font-bold text-[#1a3a52] mb-1 text-sm">{title}</h4>
+                    <p className="text-gray-600 text-sm">{description}</p>
                   </div>
                 </div>
               ))}
@@ -53,8 +53,8 @@ function About() {
           </div>
           
           <div className="flex justify-center">
-            <div className="h-[500px] w-full max-w-md aspect-3/4 bg-linear-to-br from-gray-200 to-gray-300 rounded-2xl border-4 border-dashed border-gray-400 flex items-center justify-center p-8">
-              <p className="text-center text-gray-600 font-semibold text-lg">
+            <div className="h-[400px] w-full max-w-sm bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl border-4 border-dashed border-gray-400 flex items-center justify-center p-6">
+              <p className="text-center text-gray-600 font-semibold text-base">
                 Foto profesional de Jorge
               </p>
             </div>
