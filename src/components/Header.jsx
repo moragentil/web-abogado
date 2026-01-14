@@ -1,4 +1,4 @@
-import { Scale } from 'lucide-react'
+import { Scale, MessageCircle } from 'lucide-react'
 
 function Header() {
   return (
@@ -6,14 +6,18 @@ function Header() {
       <div className="container nav-bar">
         <div className="brand">
           <Scale className="icon" />
-          <span>Estudio Jurídico</span>
+          <span>Consultora de Trámites</span>
         </div>
         <nav className="nav-links">
           <a href="#servicios">Servicios</a>
-          <a href="#experiencia">Experiencia</a>
+          <a href="#sobre-jorge">Sobre Jorge</a>
+          <a href="#testimonios">Testimonios</a>
           <a href="#contacto">Contacto</a>
         </nav>
-        <button className="btn btn-primary">Consulta Gratuita</button>
+        <a href="https://wa.me/5492211234567" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+          <MessageCircle className="icon-inline" />
+          WhatsApp
+        </a>
       </div>
     </header>
   )

@@ -392,6 +392,144 @@
   font-size: 14px;
 }
 
+.subsection-title {
+  color: #1a3a52;
+  font-size: clamp(22px, 2.5vw, 28px);
+  margin: 40px 0 20px;
+  text-align: center;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.subsection-title:first-of-type {
+  margin-top: 0;
+}
+
+.service-card h3 {
+  font-size: 18px;
+}
+
+.about-grid {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.about-image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 3/4;
+  background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #9ca3af;
+  padding: 20px;
+  text-align: center;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.star-icon {
+  width: 18px;
+  height: 18px;
+  fill: #fbbf24;
+  color: #fbbf24;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #4b5563;
+  flex-grow: 1;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  font-weight: 700;
+  color: #1a3a52;
+  margin-top: 4px;
+}
+
+.contact-link {
+  color: #2c5f7e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.map-container {
+  margin-top: 40px;
+}
+
+.map-container h3 {
+  color: #1a3a52;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.map-placeholder {
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.icon-inline {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* WhatsApp floating button (opcional) */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
 @media (min-width: 720px) {
   .nav-links {
     display: inline-flex;
