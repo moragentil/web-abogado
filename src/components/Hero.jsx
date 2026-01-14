@@ -5,29 +5,41 @@ function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.08),transparent_35%)]"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight mb-5 drop-shadow-lg">
-            Te ayudamos a gestionar tus trámites legales de manera rápida y segura
-          </h1>
-          <p className="text-base sm:text-lg text-white/95 mb-6 leading-relaxed drop-shadow-md">
-            Soy Jorge, abogado especializado en trámites legales con ubicación estratégica en La Plata. 
-            Con años de experiencia, te brindo un servicio confiable, eficiente y accesible para resolver todas tus gestiones.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <a 
-              href="#contacto" 
-              className="inline-flex items-center justify-center bg-white text-[#1a3a52] px-6 py-3 rounded-xl font-bold hover:-translate-y-1 transition-all shadow-xl hover:shadow-2xl"
-            >
-              Consultar Trámite
-            </a>
-            <a 
-              href="https://wa.me/5492211234567" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm text-white border-2 border-white px-6 py-3 rounded-xl font-bold hover:-translate-y-1 hover:bg-white/20 transition-all"
-            >
-              Contactar por WhatsApp
-            </a>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Contenido de texto */}
+          <div>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium text-white leading-tight mb-5 drop-shadow-lg">
+              Te ayudamos a gestionar tus trámites legales de manera rápida y segura
+            </h1>
+            <p className="text-base font-light sm:text-lg text-white/95 mb-6 leading-relaxed drop-shadow-md">
+              Soy Jorge, abogado especializado en trámites legales con ubicación estratégica en La Plata. 
+              Con años de experiencia, te brindo un servicio confiable, eficiente y accesible para resolver todas tus gestiones.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a 
+                href="#contacto" 
+                className="inline-flex items-center justify-center bg-white text-[#1a3a52] px-6 py-3 rounded-xl font-bold hover:-translate-y-1 transition-all shadow-xl hover:shadow-2xl"
+              >
+                Consultar Trámite
+              </a>
+              <a 
+                href="https://wa.me/5492211234567" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm text-white border-2 border-white px-6 py-3 rounded-xl font-bold hover:-translate-y-1 hover:bg-white/20 transition-all"
+              >
+                Contactar por WhatsApp
+              </a>
+            </div>
+          </div>
+
+          {/* Logo */}
+          <div className="hidden lg:flex justify-center items-center">
+            <img 
+              src="/src/assets/logo-hero.png" 
+              alt="Consultora de Trámites - Jorge" 
+              className="w-full max-w-md drop-shadow-2xl"
+            />
           </div>
         </div>
       </div>

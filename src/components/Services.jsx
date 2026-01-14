@@ -68,9 +68,6 @@ function Services() {
           </p>
         </div>
 
-        <h3 className="text-2xl font-bold text-primary text-center mb-8">
-          Trámites Más Importantes
-        </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
           {importantServices.map(({ icon: Icon, title, description }) => (
             <div 
@@ -89,7 +86,7 @@ function Services() {
         </div>
 
         <h3 className="text-xl font-semibold text-gray-600 text-center mb-6 mt-16">
-          Trámites para Acompañar
+          Trámites Adicionales
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-4xl mx-auto">
           {additionalServices.map(({ icon: Icon, title }) => (

@@ -53,7 +53,7 @@ function About() {
           </div>
           
           <div className="flex justify-center">
-            <div className="w-full max-w-md aspect-[3/4] bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl border-4 border-dashed border-gray-400 flex items-center justify-center p-8">
+            <div className="h-[500px] w-full max-w-md aspect-3/4 bg-linear-to-br from-gray-200 to-gray-300 rounded-2xl border-4 border-dashed border-gray-400 flex items-center justify-center p-8">
               <p className="text-center text-gray-600 font-semibold text-lg">
                 Foto profesional de Jorge
               </p>

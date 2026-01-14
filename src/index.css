@@ -1,8 +1,34 @@
 @import "tailwindcss";
 
+/* Importar Merriweather desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
 @theme {
   --color-primary: #1a3a52;
   --color-primary-light: #2c5f7e;
   --color-primary-dark: #0f2639;
+  --font-family-serif: 'Merriweather', Georgia, serif;
+  --font-family-sans: 'Merriweather', Georgia, serif;
+}
+
+:root {
+  font-family: var(--font-family-sans);
+  line-height: 1.5;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #1f2937;
+}
+
+/* Clases de utilidad para fuentes */
+h1, h2, h3 {
+  font-family: var(--font-family-serif);
 }
 
