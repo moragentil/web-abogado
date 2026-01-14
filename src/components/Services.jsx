@@ -60,7 +60,7 @@ function Services() {
     <section id="servicios" className="py-20 bg-white scroll-m-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-primary mb-3">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1a3a52] mb-3">
             Nuestros Servicios
           </h2>
           <p className="text-lg text-gray-600">
@@ -68,16 +68,19 @@ function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 mb-16">
           {importantServices.map(({ icon: Icon, title, description }) => (
             <div 
               key={title} 
-              className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all min-h-[280px] flex flex-col"
+              className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all sm:min-h-[280px] flex flex-col"
             >
-              <Icon className="w-8 h-8 text-primary-light mb-4" />
-              <h3 className="text-base font-bold text-primary mb-3 leading-snug">
-                {title}
-              </h3>
+              {/* Móvil: ícono al lado del título */}
+              <div className="flex items-start gap-1 sm:block mb-2 sm:mb-0">
+                <Icon className="w-4 h-4 sm:w-8 sm:h-8 text-[#2c5f7e] flex-shrink-0 sm:mb-4" />
+                <h3 className="text-sm sm:text-base font-bold text-[#1a3a52] leading-snug flex-1 sm:mb-3">
+                  {title}
+                </h3>
+              </div>
               <p className="text-sm text-gray-600 leading-relaxed">
                 {description}
               </p>
@@ -92,9 +95,9 @@ function Services() {
           {additionalServices.map(({ icon: Icon, title }) => (
             <div 
               key={title} 
-              className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-xl p-4 hover:bg-white hover:border-primary-light hover:shadow-md transition-all"
+              className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-xl p-4 hover:bg-white hover:border-[#2c5f7e] hover:shadow-md transition-all"
             >
-              <Icon className="w-5 h-5 text-primary-light flex-shrink-0" />
+              <Icon className="w-5 h-5 text-[#2c5f7e] flex-shrink-0" />
               <span className="text-sm font-medium text-gray-800">
                 {title}
               </span>
