@@ -1,4 +1,5 @@
 import { Star } from 'lucide-react'
+import fondoOpiniones from '../assets/fondo-opiniones2.webp'
 
 const testimonials = [
 	{
@@ -29,7 +30,7 @@ function Testimonials() {
 			id="testimonios"
 			className="py-16 relative overflow-hidden bg-cover bg-center bg-fixed scroll-m-10"
 			style={{
-				backgroundImage: "url('/src/assets/fondo-opiniones2.webp')",
+				backgroundImage: `url(${fondoOpiniones})`,
 			}}
 		>
 			{/* Capa de color encima */}
