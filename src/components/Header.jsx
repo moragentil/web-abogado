@@ -29,9 +29,9 @@ function Header() {
             href="https://wa.me/5492211234567" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="flex items-center gap-2 bg-primary text-white px-4 py-2.5 rounded-xl font-bold hover:bg-primary-light transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
+            className="flex items-center gap-2 bg-primary text-[white] px-4 py-2.5 rounded-xl font-bold hover:bg-primary-light transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
           >
-            <MessageCircle className="w-4 h-4" />
+            <MessageCircle className="w-4 h-4 text-white" />
             WhatsApp
           </a>
         </div>

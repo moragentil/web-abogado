@@ -6,26 +6,3 @@
   --color-primary-dark: #0f2639;
 }
 
-:root {
-  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background: #ffffff;
-  color: #1f2937;
-}
-
-a {
-  color: inherit;
-}
-
-#root {
-  min-height: 100vh;
-}
