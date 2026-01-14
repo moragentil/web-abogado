@@ -25,22 +25,34 @@ const testimonials = [
 
 function Testimonials() {
   return (
-    <section id="testimonios" className="section">
-      <div className="container">
-        <div className="section-header">
-          <h2>Opiniones de Clientes</h2>
-          <p>Lo que dicen quienes confiaron en nuestros servicios</p>
+    <section id="testimonios" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-primary mb-3">
+            Opiniones de Clientes
+          </h2>
+          <p className="text-lg text-gray-600">
+            Lo que dicen quienes confiaron en nuestros servicios
+          </p>
         </div>
-        <div className="testimonials-grid">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map(({ name, text }) => (
-            <div key={name} className="card testimonial-card">
-              <div className="stars">
+            <div 
+              key={name} 
+              className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col"
+            >
+              <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="icon star-icon" />
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <p className="testimonial-text">"{text}"</p>
-              <p className="testimonial-author">— {name}</p>
+              <p className="text-gray-600 italic leading-relaxed mb-4 flex-grow">
+                "{text}"
+              </p>
+              <p className="font-bold text-primary">
+                — {name}
+              </p>
             </div>
           ))}
         </div>

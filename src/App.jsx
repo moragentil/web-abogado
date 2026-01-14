@@ -9,7 +9,7 @@ import Testimonials from './components/Testimonials'
 
 function App() {
   return (
-    <div className="page">
+    <div className="min-h-screen bg-white">
       <Header />
       <Hero />
       <Services />

@@ -32,62 +32,75 @@ const additionalServices = [
   {
     icon: Scale,
     title: 'Diligenciamiento de oficios y cédulas judiciales',
-    description: 'Tramitación eficiente de comunicaciones judiciales.',
   },
   {
     icon: Briefcase,
-    title: 'Informes de juicios universales',
-    description: 'Sucesiones, quiebras y concursos preventivos.',
+    title: 'Informes de juicios universales (sucesiones, quiebras, concursos)',
   },
   {
     icon: Building,
     title: 'Informes comerciales',
-    description: 'Búsqueda y análisis de información comercial de personas y empresas.',
   },
   {
     icon: Home,
-    title: 'Informes catastrales',
-    description: 'Certificados de catastro, cédulas, planchetas y valuación fiscal.',
+    title: 'Informes catastrales (certificados, cédulas, planchetas, valuación)',
   },
   {
     icon: FileText,
     title: 'Sucesiones en Provincia de Bs. As. y Capital Federal',
-    description: 'Gestión completa de trámites sucesorios en ambas jurisdicciones.',
   },
   {
     icon: FileCheck,
-    title: 'Certificación de años de servicio',
-    description: 'Tramitación en IPS / ANSES y reclamos administrativos.',
+    title: 'Certificación de años de servicio en IPS / ANSES',
   },
 ]
 
 function Services() {
   return (
-    <section id="servicios" className="section">
-      <div className="container">
-        <div className="section-header">
-          <h2>Nuestros Servicios</h2>
-          <p>Tramitación profesional y confiable para todas tus necesidades legales</p>
+    <section id="servicios" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-primary mb-3">
+            Nuestros Servicios
+          </h2>
+          <p className="text-lg text-gray-600">
+            Tramitación profesional y confiable para todas tus necesidades legales
+          </p>
         </div>
 
-        <h3 className="subsection-title">Trámites Más Importantes</h3>
-        <div className="cards-grid">
+        <h3 className="text-2xl font-bold text-primary text-center mb-8">
+          Trámites Más Importantes
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
           {importantServices.map(({ icon: Icon, title, description }) => (
-            <div key={title} className="card service-card">
-              <Icon className="icon large" />
-              <h3>{title}</h3>
-              <p>{description}</p>
+            <div 
+              key={title} 
+              className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all min-h-[280px] flex flex-col"
+            >
+              <Icon className="w-8 h-8 text-primary-light mb-4" />
+              <h3 className="text-base font-bold text-primary mb-3 leading-snug">
+                {title}
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {description}
+              </p>
             </div>
           ))}
         </div>
 
-        <h3 className="subsection-title">Trámites para Acompañar</h3>
-        <div className="cards-grid">
-          {additionalServices.map(({ icon: Icon, title, description }) => (
-            <div key={title} className="card service-card">
-              <Icon className="icon large" />
-              <h3>{title}</h3>
-              <p>{description}</p>
+        <h3 className="text-xl font-semibold text-gray-600 text-center mb-6 mt-16">
+          Trámites para Acompañar
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-4xl mx-auto">
+          {additionalServices.map(({ icon: Icon, title }) => (
+            <div 
+              key={title} 
+              className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-xl p-4 hover:bg-white hover:border-primary-light hover:shadow-md transition-all"
+            >
+              <Icon className="w-5 h-5 text-primary-light flex-shrink-0" />
+              <span className="text-sm font-medium text-gray-800">
+                {title}
+              </span>
             </div>
           ))}
         </div>
