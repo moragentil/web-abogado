@@ -13,7 +13,6 @@ function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4 gap-4">
           <div className="flex items-center gap-3">
-            <Scale className="w-6 h-6 text-[#1a3a52]" />
             <span className="text-lg font-bold text-[#1a3a52] hidden sm:inline">Consultora de Trámites</span>
           </div>
           
@@ -22,8 +21,8 @@ function Header() {
             <a href="#servicios" className="text-gray-600 hover:text-[#1a3a52] transition-colors">
               Servicios
             </a>
-            <a href="#sobre-jorge" className="text-gray-600 hover:text-[#1a3a52] transition-colors">
-              Sobre Jorge
+            <a href="#sobre-nosotros" className="text-gray-600 hover:text-[#1a3a52] transition-colors">
+              Sobre Nosotros
             </a>
             <a href="#testimonios" className="text-gray-600 hover:text-[#1a3a52] transition-colors">
               Testimonios
@@ -75,11 +74,11 @@ function Header() {
                   Servicios
                 </a>
                 <a 
-                  href="#sobre-jorge" 
+                  href="#sobre-nosotros" 
                   onClick={closeMenu}
                   className="text-gray-600 hover:text-[#1a3a52] transition-colors py-2 px-4 rounded-lg hover:bg-gray-100 font-semibold"
                 >
-                  Sobre Jorge
+                  Sobre Nosotros
                 </a>
                 <a 
                   href="#testimonios" 

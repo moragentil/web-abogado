@@ -4,7 +4,7 @@ const highlights = [
   {
     icon: Award,
     title: 'Profesionalismo',
-    description: 'Abogado con amplia experiencia en gestión de trámites legales.',
+    description: 'Equipo con amplia experiencia en la gestión de trámites y diligencias.',
   },
   {
     icon: Clock,
@@ -20,21 +20,20 @@ const highlights = [
 
 function About() {
   return (
-    <section id="sobre-jorge" className="py-16 bg-gray-50 scroll-m-16">
+    <section id="sobre-nosotros" className="py-16 bg-gray-50 scroll-m-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1a3a52] mb-5">
-              Sobre Jorge
+              Sobre Nosotros
             </h2>
             <p className="text-base text-gray-600 leading-relaxed mb-3">
-              Soy Jorge, abogado especializado en la gestión de trámites legales. Mi objetivo es brindarte 
-              un servicio de calidad, caracterizado por la seriedad, confiabilidad y rapidez en cada gestión.
+              Somos una consultora especializada en la gestión de trámites. 
+              Nuestro objetivo es brindarte un servicio de calidad, caracterizado por la seriedad, confiabilidad y rapidez en cada gestión.
             </p>
             <p className="text-base text-gray-600 leading-relaxed mb-6">
-              Con ubicación estratégica en La Plata, facilito el acceso a todos los organismos necesarios 
-              para resolver tus trámites de manera eficiente. Mi compromiso es acompañarte en cada paso 
-              del proceso con profesionalismo y dedicación.
+              Con una ubicación estrategica en la ciudad de La Plata, facilitamos el acceso a los organismos necesarios para resolver tus trámites de manera eficiente. 
+              Nuestro compromiso es acompañarte en cada paso del proceso con profesionalismo y dedicación.
             </p>
             
             <div className="space-y-4">

@@ -10,7 +10,7 @@ function Footer() {
               <span className="text-lg font-bold text-white">Consultora de Trámites</span>
             </div>
             <p className="text-gray-300 leading-relaxed text-sm">
-              Jorge - Abogado especializado en trámites legales. Seriedad, confiabilidad y rapidez en cada gestión.
+              Especializada en la gestión de diligencias. Seriedad, confiabilidad y rapidez en cada gestión.
             </p>
           </div>
           
@@ -23,8 +23,8 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#sobre-jorge" className="text-gray-300 hover:text-white transition-colors block">
-                  Sobre Jorge
+                <a href="#sobre-nosotros" className="text-gray-300 hover:text-white transition-colors block">
+                  Sobre Nosotros
                 </a>
               </li>
               <li>
@@ -46,10 +46,6 @@ function Footer() {
               <p className="text-gray-300">
                 <span className="font-medium text-white">Lunes a Viernes:</span><br />
                 9:00 - 18:00
-              </p>
-              <p className="text-gray-300">
-                <span className="font-medium text-white">Sábados:</span><br />
-                9:00 - 13:00
               </p>
               <p className="text-white font-semibold mt-4 pt-2">
                 La Plata, Buenos Aires

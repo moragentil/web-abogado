@@ -23,7 +23,7 @@ function Hero() {
               Te ayudamos a gestionar tus trámites legales de manera rápida y segura
             </h1>
             <p className="text-sm sm:text-base font-light text-white/95 mb-5 leading-relaxed drop-shadow-md">
-              Soy Jorge, abogado especializado en trámites legales. <span className='hidden sm:inline'>Mi compromiso es brindarte un servicio caracterizado por la seriedad, confiabilidad y rapidez en cada gestión. </span> 
+              Somos una consultora especializada en la gestión de trámites. <span className='hidden sm:inline'>Nuestro compromiso es brindarte un servicio caracterizado por la seriedad, confiabilidad y rapidez en cada gestión. </span> 
             </p>
             <div className="flex flex-col sm:flex-row gap-2.5 justify-center lg:justify-start">
               <a 
