@@ -34,7 +34,7 @@ function Header() {
           
           {/* Desktop WhatsApp Button */}
           <a 
-            href="https://wa.me/5492211234567" 
+            href="https://wa.me/5492215459763" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="hidden md:flex items-center gap-2 bg-[#1a3a52] text-white px-4 py-2.5 rounded-xl font-bold hover:bg-[#2c5f7e] transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
@@ -95,7 +95,7 @@ function Header() {
                   Contacto
                 </a>
                 <a 
-                  href="https://wa.me/5492211234567" 
+                  href="https://wa.me/5492215459763" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   onClick={closeMenu}

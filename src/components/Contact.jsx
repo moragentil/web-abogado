@@ -1,10 +1,10 @@
 import { Mail, MapPin, Phone, MessageCircle } from 'lucide-react'
 
 const contacts = [
-  { icon: Phone, label: 'Teléfono', value: '+54 221 123-4567' },
+  { icon: Phone, label: 'Teléfono', value: '+54 221 545-9763' },
   { icon: Mail, label: 'Email', value: 'jorge@consultoratramites.com' },
   { icon: MapPin, label: 'Oficina', value: 'La Plata, Buenos Aires' },
-  { icon: MessageCircle, label: 'WhatsApp', value: '+54 9 221 123-4567', link: 'https://wa.me/5492211234567' },
+  { icon: MessageCircle, label: 'WhatsApp', value: '+54 9 221 545-9763', link: 'https://wa.me/5492215459763' },
 ]
 
 function Contact() {

@@ -33,7 +33,7 @@ function Hero() {
               Consultar Trámite
             </a>
             <a 
-              href="https://wa.me/5492211234567" 
+              href="https://wa.me/5492215459763" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm text-white border-2 border-white px-5 py-3 rounded-xl font-bold hover:-translate-y-1 hover:bg-white/20 transition-all text-sm sm:text-base"
