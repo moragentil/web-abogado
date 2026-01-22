@@ -13,7 +13,7 @@ function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4 gap-4">
           <div className="flex items-center gap-3">
-            <span className="text-lg font-bold text-[#1a3a52] hidden sm:inline">Consultora de Trámites</span>
+            <span className="text-lg font-bold text-[#1a3a52] ">Consultora de Trámites</span>
           </div>
           
           {/* Desktop Navigation */}
