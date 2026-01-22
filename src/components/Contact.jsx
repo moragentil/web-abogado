@@ -1,10 +1,10 @@
 import { Mail, MapPin, Phone, MessageCircle } from 'lucide-react'
 
 const contacts = [
-  { icon: Phone, label: 'Teléfono', value: '+54 221 545-9763' },
-  { icon: Mail, label: 'Email', value: 'jorge@consultoratramites.com' },
-  { icon: MapPin, label: 'Oficina', value: 'La Plata, Buenos Aires' },
+  { icon: Phone, label: 'Teléfono', value: '+54 221 694-3746' },
+  { icon: Mail, label: 'Email', value: 'tramitesar@yahoo.com.ar' },
   { icon: MessageCircle, label: 'WhatsApp', value: '+54 9 221 545-9763', link: 'https://wa.me/5492215459763' },
+  { icon: MapPin, label: 'Oficina', value: 'Calle 8 y 55 local Nro 4, La Plata' },
 ]
 
 function Contact() {
@@ -16,7 +16,7 @@ function Contact() {
             Contacto
           </h2>
           <p className="text-base text-gray-600">
-            Estoy aquí para ayudarte. Completa el formulario o contáctame directamente.
+            Completá el formulario o contáctame directamente.
           </p>
         </div>
 
@@ -58,7 +58,6 @@ function Contact() {
               <h4 className="font-bold text-[#1a3a52] mb-2.5 text-sm">Horario de Atención</h4>
               <div className="space-y-1.5 text-xs text-gray-700">
                 <p><span className="font-semibold">Lunes a Viernes:</span> 9:00 - 18:00</p>
-                <p><span className="font-semibold">Sábados:</span> 9:00 - 13:00</p>
               </div>
             </div>
           </div>

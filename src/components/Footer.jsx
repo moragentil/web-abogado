@@ -1,4 +1,4 @@
-import { Scale, Mail, Phone, MessageCircle } from 'lucide-react'
+import { Scale, Mail, Phone, MessageCircle, MapPin } from 'lucide-react'
 
 function Footer() {
   return (
@@ -44,18 +44,18 @@ function Footer() {
             <h4 className="font-bold text-lg mb-4 text-white">Contacto</h4>
             <div className="space-y-3 text-sm">
               <a 
-                href="tel:+542215459763" 
+                href="tel:+542216943746" 
                 className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>221 545-9763</span>
+                <span>221 694-3746</span>
               </a>
               <a 
-                href="mailto:jorge@consultoratramites.com" 
+                href="mailto:tramitesar@yahoo.com.ar" 
                 className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors break-all"
               >
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>jorge@consultoratramites.com</span>
+                <span>tramitesar@yahoo.com.ar</span>
               </a>
               <a 
                 href="https://wa.me/5492215459763" 
@@ -66,6 +66,10 @@ function Footer() {
                 <MessageCircle className="w-4 h-4" />
                 <span>WhatsApp</span>
               </a>
+              <div className="flex items-start gap-2 text-gray-300">
+                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                <span>Calle 8 y 55 local Nro 4<br/>La Plata</span>
+              </div>
             </div>
           </div>
           
@@ -75,9 +79,6 @@ function Footer() {
               <p className="text-gray-300">
                 <span className="font-medium text-white">Lunes a Viernes:</span><br />
                 9:00 - 18:00
-              </p>
-              <p className="text-white font-semibold mt-4 pt-2">
-                La Plata, Buenos Aires
               </p>
             </div>
           </div>
