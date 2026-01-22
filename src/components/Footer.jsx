@@ -64,7 +64,7 @@ function Footer() {
                 className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>WhatsApp</span>
+                <span>221 545-9763</span>
               </a>
               <div className="flex items-start gap-2 text-gray-300">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />

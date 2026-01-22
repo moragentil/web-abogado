@@ -1,4 +1,6 @@
-import { Mail, MapPin, Phone, MessageCircle } from 'lucide-react'
+import { Mail, MapPin, Phone, MessageCircle, CheckCircle, XCircle } from 'lucide-react'
+import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 const contacts = [
   { icon: Phone, label: 'Teléfono', value: '+54 221 694-3746' },
@@ -8,6 +10,35 @@ const contacts = [
 ]
 
 function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null) // 'success' | 'error' | null
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    try {
+      const result = await emailjs.sendForm(
+        'service_bcb97ss',    // Service ID
+        'template_91ksu3h',   // Template ID
+        e.target,             // El formulario completo
+        'nVhdidvfv_w3zTlw3'   // Public Key
+      )
+
+      console.log('Email enviado:', result.text)
+      setSubmitStatus('success')
+      e.target.reset() // Limpia el formulario
+    } catch (error) {
+      console.error('Error al enviar email:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+      // Ocultar mensaje después de 5 segundos
+      setTimeout(() => setSubmitStatus(null), 5000)
+    }
+  }
+
   return (
     <section id="contacto" className="py-16 bg-gray-50 scroll-m-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,17 +96,35 @@ function Contact() {
           {/* Formulario */}
           <div className="bg-white rounded-xl border border-gray-200 shadow-xl p-5">
             <h3 className="text-lg font-bold text-[#1a3a52] mb-4">Envía tu consulta</h3>
-            <form className="space-y-3">
+            
+            {/* Mensajes de estado */}
+            {submitStatus === 'success' && (
+              <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg flex items-center gap-2 text-green-800">
+                <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                <p className="text-xs font-medium">¡Consulta enviada con éxito! Te contactaremos pronto.</p>
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg flex items-center gap-2 text-red-800">
+                <XCircle className="w-5 h-5 flex-shrink-0" />
+                <p className="text-xs font-medium">Error al enviar. Por favor, intenta nuevamente.</p>
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-3">
               <div>
                 <label htmlFor="nombre" className="block font-semibold text-gray-800 mb-1.5 text-xs">
                   Nombre Completo
                 </label>
                 <input 
                   id="nombre" 
+                  name="nombre"
                   type="text" 
                   placeholder="Tu nombre" 
                   required
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-[#2c5f7e] focus:ring-2 focus:ring-[#1a3a52]/10 outline-none transition-all text-xs"
+                  disabled={isSubmitting}
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-[#2c5f7e] focus:ring-2 focus:ring-[#1a3a52]/10 outline-none transition-all text-xs disabled:bg-gray-100 disabled:cursor-not-allowed"
                 />
               </div>
               
@@ -85,10 +134,12 @@ function Contact() {
                 </label>
                 <input 
                   id="email" 
+                  name="email"
                   type="email" 
                   placeholder="tu@email.com" 
                   required
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-[#2c5f7e] focus:ring-2 focus:ring-[#1a3a52]/10 outline-none transition-all text-xs"
+                  disabled={isSubmitting}
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-[#2c5f7e] focus:ring-2 focus:ring-[#1a3a52]/10 outline-none transition-all text-xs disabled:bg-gray-100 disabled:cursor-not-allowed"
                 />
               </div>
               
@@ -98,10 +149,12 @@ function Contact() {
                 </label>
                 <input 
                   id="telefono" 
+                  name="telefono"
                   type="tel" 
                   placeholder="+54 11 1234-5678" 
                   required
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-[#2c5f7e] focus:ring-2 focus:ring-[#1a3a52]/10 outline-none transition-all text-xs"
+                  disabled={isSubmitting}
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-[#2c5f7e] focus:ring-2 focus:ring-[#1a3a52]/10 outline-none transition-all text-xs disabled:bg-gray-100 disabled:cursor-not-allowed"
                 />
               </div>
               
@@ -111,8 +164,11 @@ function Contact() {
                 </label>
                 <select 
                   id="tramite" 
+                  name="tramite"
                   defaultValue=""
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-[#2c5f7e] focus:ring-2 focus:ring-[#1a3a52]/10 outline-none transition-all text-xs"
+                  required
+                  disabled={isSubmitting}
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-[#2c5f7e] focus:ring-2 focus:ring-[#1a3a52]/10 outline-none transition-all text-xs disabled:bg-gray-100 disabled:cursor-not-allowed"
                 >
                   <option value="" disabled>Selecciona un trámite</option>
                   <option>Declaratoria de herederos</option>
@@ -136,18 +192,21 @@ function Contact() {
                 </label>
                 <textarea 
                   id="mensaje" 
+                  name="mensaje"
                   rows="3" 
                   placeholder="Cuéntame sobre tu trámite o consulta..." 
                   required
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-[#2c5f7e] focus:ring-2 focus:ring-[#1a3a52]/10 outline-none transition-all resize-vertical text-xs"
+                  disabled={isSubmitting}
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-[#2c5f7e] focus:ring-2 focus:ring-[#1a3a52]/10 outline-none transition-all resize-vertical text-xs disabled:bg-gray-100 disabled:cursor-not-allowed"
                 ></textarea>
               </div>
               
               <button 
                 type="submit" 
-                className="w-full bg-[#1a3a52] text-white px-5 py-2.5 rounded-lg font-bold hover:bg-[#2c5f7e] transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl text-sm"
+                disabled={isSubmitting}
+                className="w-full bg-[#1a3a52] text-white px-5 py-2.5 rounded-lg font-bold hover:bg-[#2c5f7e] transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl text-sm disabled:bg-gray-400 disabled:cursor-not-allowed disabled:transform-none"
               >
-                Enviar Consulta
+                {isSubmitting ? 'Enviando...' : 'Enviar Consulta'}
               </button>
             </form>
           </div>
