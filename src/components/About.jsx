@@ -1,4 +1,5 @@
 import { Award, Clock, MapPin } from 'lucide-react'
+import abogadoImg from '../assets/foto-abogado.jpg'
 
 const highlights = [
   {
@@ -52,10 +53,12 @@ function About() {
           </div>
           
           <div className="flex justify-center">
-            <div className="h-[400px] w-full max-w-sm bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl border-4 border-dashed border-gray-400 flex items-center justify-center p-6">
-              <p className="text-center text-gray-600 font-semibold text-base">
-                Foto profesional de Jorge
-              </p>
+            <div className="h-[400px] w-full max-w-sm rounded-2xl overflow-hidden shadow-xl">
+              <img 
+                src={abogadoImg} 
+                alt="Jorge - Consultora de Trámites" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

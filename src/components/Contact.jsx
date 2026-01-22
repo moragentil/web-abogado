@@ -159,9 +159,9 @@ function Contact() {
           </h3>
           <div className="rounded-xl overflow-hidden shadow-xl">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52562.19281010535!2d-57.99570084863281!3d-34.92144999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e62b1f0085a1%3A0xbcfc44f0547312e3!2sLa%20Plata%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d817.8821688741036!2d-57.94787983043056!3d-34.91827579863765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e71a2f377305%3A0x8833e68b1ed06dba!2sConsultora%20de%20Tr%C3%A1mites!5e0!3m2!1sen!2sar!4v1769092252043!5m2!1sen!2sar"
               width="100%"
-              height="350"
+              height="450"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
