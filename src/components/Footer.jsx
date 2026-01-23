@@ -86,7 +86,7 @@ function Footer() {
         
         <div className="border-t border-white/20 pt-6 text-center">
           <p className="text-gray-300 text-sm">
-            © 2026 Consultora de Trámites - Jorge. Todos los derechos reservados.
+            © 2026 Consultora de Trámites. Todos los derechos reservados.
           </p>
         </div>
       </div>
