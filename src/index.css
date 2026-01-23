@@ -3,12 +3,22 @@
 /* Importar Merriweather desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
+/* Importar Messina desde archivos locales */
+@font-face {
+  font-family: 'Messina';
+  src: url('./fonts/Messina.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-primary: #1a3a52;
   --color-primary-light: #2c5f7e;
   --color-primary-dark: #0f2639;
   --font-family-serif: 'Merriweather', Georgia, serif;
   --font-family-sans: 'Merriweather', Georgia, serif;
+  --font-family-messina: 'Messina', sans-serif;
 }
 
 :root {

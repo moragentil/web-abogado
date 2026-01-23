@@ -1,4 +1,5 @@
 import { Scale, Mail, Phone, MessageCircle, MapPin } from 'lucide-react'
+import LogoR from '../assets/favicon.ico'
 
 function Footer() {
   return (
@@ -85,9 +86,17 @@ function Footer() {
         </div>
         
         <div className="border-t border-white/20 pt-6 text-center">
-          <p className="text-gray-300 text-sm">
-            © 2026 Consultora de Trámites. Todos los derechos reservados.
-          </p>
+          <div className="md:text-center flex flex-col sm:flex-row sm:justify-between items-center gap-2 md:gap-4">
+            <p className="text-gray-300 text-sm">
+              © 2026 Consultora de Trámites. Todos los derechos reservados.
+            </p>
+            <a href="https://www.resguarit.com.ar" target="_blank" rel="noopener noreferrer">
+              <div className="flex items-center gap-2">
+                <img src={LogoR} alt="Logo Resguar IT" className="h-4" />
+                <p className="text-gray-300 hover:underline text-xs md:text-sm" >Desarrollado por <span className="tracking-wide " style={{ fontFamily: 'Messina, sans-serif' }}>Resguar IT</span></p>
+              </div>
+              </a>
+          </div>
         </div>
       </div>
     </footer>
