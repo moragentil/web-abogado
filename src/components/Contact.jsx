@@ -179,7 +179,7 @@ function Contact() {
                   <option>Diligenciamiento de oficios y cédulas</option>
                   <option>Informes de juicios universales</option>
                   <option>Informes comerciales</option>
-                  <option>Informes catastrales</option>
+                  <option>Valuaciones Fiscales</option>
                   <option>Sucesiones</option>
                   <option>Certificación de años de servicio</option>
                   <option>Otro</option>

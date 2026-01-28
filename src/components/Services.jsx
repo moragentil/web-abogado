@@ -43,7 +43,7 @@ const additionalServices = [
   },
   {
     icon: Home,
-    title: 'Informes catastrales (certificados, cédulas, planchetas, valuación)',
+    title: 'Valuaciones fiscales (certificados, cédulas, planchetas, valuación)',
   },
   {
     icon: FileText,

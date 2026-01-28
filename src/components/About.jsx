@@ -1,5 +1,5 @@
 import { Award, Clock, MapPin } from 'lucide-react'
-import abogadoImg from '../assets/foto-abogado.jpg'
+import abogadoImg from '../assets/fondo-escritorio.webp'
 
 const highlights = [
   {
