@@ -1,6 +1,5 @@
 import { Mail, MapPin, Phone, MessageCircle, CheckCircle, XCircle } from 'lucide-react'
 import { useState } from 'react'
-import emailjs from '@emailjs/browser'
 
 const contacts = [
   { icon: Phone, label: 'Teléfono', value: '+54 221 694-3746' },
@@ -19,22 +18,25 @@ function Contact() {
     setSubmitStatus(null)
 
     try {
-      const result = await emailjs.sendForm(
-        'service_bcb97ss',    // Service ID
-        'template_91ksu3h',   // Template ID
-        e.target,             // El formulario completo
-        'nVhdidvfv_w3zTlw3'   // Public Key
-      )
+      const response = await fetch('https://formspree.io/f/mvzrkdep', {
+        method: 'POST',
+        body: new FormData(e.target),
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
 
-      console.log('Email enviado:', result.text)
-      setSubmitStatus('success')
-      e.target.reset() // Limpia el formulario
+      if (response.ok) {
+        setSubmitStatus('success')
+        e.target.reset()
+      } else {
+        setSubmitStatus('error')
+      }
     } catch (error) {
-      console.error('Error al enviar email:', error)
+      console.error('Error al enviar:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
-      // Ocultar mensaje después de 5 segundos
       setTimeout(() => setSubmitStatus(null), 5000)
     }
   }
@@ -113,6 +115,9 @@ function Contact() {
             )}
 
             <form onSubmit={handleSubmit} className="space-y-3">
+              {/* Campo oculto para el asunto */}
+              <input type="hidden" name="_subject" value="Nueva Consulta - Consultora de Trámites" />
+              
               <div>
                 <label htmlFor="nombre" className="block font-semibold text-gray-800 mb-1.5 text-xs">
                   Nombre Completo
